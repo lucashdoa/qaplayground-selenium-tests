@@ -13,9 +13,8 @@ public class BaseTest {
         this.driver = DriverFactory.getDriver();
     }
 
-    @Parameters({"browser"})
     @BeforeTest
-    public void setup(String browserName) {
+    public void setup() {
         driver.get("https://qaplayground.dev/apps/dynamic-table/");
     }
 
