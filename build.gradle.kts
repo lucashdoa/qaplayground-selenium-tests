@@ -16,5 +16,8 @@ dependencies {
 }
 
 tasks.test {
-    useJUnitPlatform()
+    useTestNG() {
+        outputDirectory = file("test-output")
+        suites("src/test/resources/testRunner/testng.xml")
+    }
 }
